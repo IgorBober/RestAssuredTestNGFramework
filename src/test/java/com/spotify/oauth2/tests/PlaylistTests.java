@@ -63,7 +63,6 @@ public class PlaylistTests extends BaseTest {
         Response response = PlaylistApi.post(invalid_token ,requestPlaylist);
         assertStatusCode(response.statusCode(), StatusCode.CODE_401);
         assertError(response.as(Error.class), StatusCode.CODE_401);
-
     }
 
     @Step
